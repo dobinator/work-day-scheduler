@@ -1,54 +1,44 @@
 //declare variables
-var timeNow = moment().format('MMMM Do YYYY, h:mm a');
-var currentDay = document.getElementById("currentDay"); 
+var timeNow = moment().format("MMMM Do YYYY, h:mm a");
+var currentDay = document.getElementById("currentDay");
 currentDay.textContent = timeNow;
 
-//Below that is a series of time blocks
+// calling the function to color the blocks by current hour
+function colorCode() {
+// variable for current hour using moment
+  var currentHour = moment().hour()
+  //running a for each loop in jQuery to add a specific background depending on the time
+  $(".row").each(function () {
+    var timeRow = parseInt($(this).attr("id"));  
+    if (currentHour > timeRow) {
+      $(this).children(".description").addClass("past");
+    } else if (currentHour < timeRow) {
+      $(this).children(".description").addClass("future");
+    } else {
+      $(this).children(".description").addClass("present");
+    }
+  });
+}
+colorCode();
 
-var hour9 = $("#hour-9"). text(); 
-var hour10 = $("#hour-10"). text(); 
-var hour11 = $("#hour-11"). text(); 
-var hour12 = $("#hour-12"). text(); 
-var hour13 = $("#hour-13"). text(); 
-var hour14 = $("#hour-14"). text(); 
-var hour15 = $("#hour-15"). text(); 
-var hour16 = $("#hour-16"). text(); 
-var hour17 = $("#hour-17"). text(); 
+//Establishing on the click there is a save on local storage
+$(".btn").on("click", function(){
+  var valueEl = $(this).siblings(".description").val();
+  var timeEl = $(this).parent().attr("id");
+  localStorage.setItem(timeEl, valueEl)
 
+});
+//grabbing the local storage to display back on the screen
+function localStore(){
+  //for each loop in jQuery to get items out of local storage
+  $(".row").each (function(){
+   //grabbing the id off the class of row 
+    var key = $(this).attr("id")
+    //grabbing the value out of local storage and getting the key
+    var value = localStorage.getItem(key)
+    //giving a value to the text box of description
+$(this).children(".description").val(value)
+})
+}
+localStore()
 
-// //Timeblocks are set for standard business hours
-// //for (let i =0; i < 8; i++){
-//     $timeBlock.append(buildTimeBlock(hour))
-//     }
-
-
-// //Timeblocks are color coded to indicate whether it is in the past, present, or future
-
-// function buildTimeBlock(hour) {
-//     var background; 
-//     if(currentHour===hour){
-//       background= $timeBlock.addClass
-//       ("present")
-//     }else if( currentHour < hour){
-//   background ="past";
-//   } else {
-//       background= "future"
-//     }
-//   }
-
-//   //when you click a timeblock I can enter an event
-
-
-// //when you click the save button for that timeblock the text is saved to local storage
-// $("saveBtn").on("click", function(e){
-//     //prevents refresh
-//     e.preventDefault ();
-//     //if the input of description is nothing(less than 1)return
-//     var description= document.querySelectorAll(".description").textContent;
-//     if(description.length < 1 )return;
-//     //the text of the description var is equal to the input of the description
-    
-//     //Save the list to localStorage
-//     localStorage.setItem("description",description); 
-//     //function for each desciption
-//     }
