@@ -15,6 +15,6 @@ Application will have:
 
 
 
-[!work day schedule](./assets/images/screenshot schedule.jpg)
+[!workdayschedule](./assets/images/screenshot schedule.jpg)
 
 
