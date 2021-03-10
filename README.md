@@ -15,7 +15,7 @@ Application will have:
 
 
 
-![work day scheduler](./assets/images/screenshot schedule.jpg)
+![work-day-scheduler](./assets/images/screenshot schedule.jpg)
 
 https://github.com/dobinator/work-day-scheduler
 
