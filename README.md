@@ -5,9 +5,9 @@ Modified starter code to allows the user to save events for each hour of the day
 
 
 ## User story: 
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively. 
+* AS AN employee with a busy schedule
+* I WANT to add important events to a daily planner
+* SO THAT I can manage my time effectively. 
 
 ## Application will have: 
 #### The current date and time posted in the header
