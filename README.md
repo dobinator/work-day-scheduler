@@ -2,7 +2,8 @@
 Modified starter code to allows the user to save events for each hour of the day.  This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 
-User story: AS AN employee with a busy schedule
+User story: 
+AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively. 
 
@@ -15,7 +16,7 @@ Application will have:
 
 
 
-![work-day-scheduler](./assets/images/screenshot schedule.jpg)
+![work-day-scheduler](./assets/images/schedule.jpg)
 
 https://github.com/dobinator/work-day-scheduler
 
