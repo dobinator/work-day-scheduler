@@ -8,11 +8,11 @@ I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively. 
 
 Application will have: 
-    -the current date and time posted in the header
-    -the blocks are set for standard business hours
-    - the time blocks are color coded to indicate whether it is in the past, present and future.
-    -When the user clicks on the timeblock, text can be entered and saved.
-    -The text is saved to local storage to be accessed at a later date and will persist after a page refresh.
+## The current date and time posted in the header
+## The blocks are set for standard business hours
+## The time blocks are color coded to indicate whether it is in the past, present and future.
+## When the user clicks on the timeblock, text can be entered and saved.
+## The text is saved to local storage to be accessed at a later date and will persist after a page refresh.
 
 
 
