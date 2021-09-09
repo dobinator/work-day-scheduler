@@ -30,6 +30,7 @@ Open app with HTML using live server or default browser
 - HTML
 - CSS/ Bootstrap
 - JavaScript
+- JQuery
 
 
 ### Still image of application
